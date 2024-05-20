@@ -158,7 +158,7 @@ Tab:AddButton({
     Name = "Fly Universal (Click For Execute)",
     Icon = "rbxassetid://7733715400",
     Callback = function()
-          loadstring(game:HttpGet("https://raw.githubusercontent.com/x7bypass/Zaneru/main/FlyGUI?token=GHSAT0AAAAAACSQD43BKBWHPH4BHYBEOAMOZSKM3JA"))()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/zanesirusen/Flying-GUI/main/Fly-GUI-V3"))()
     end
 })
 
