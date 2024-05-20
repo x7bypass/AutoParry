@@ -1,11 +1,11 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Zaneru Project", HidePremium = false, SaveConfig = true, IntroText = "Welcome Zaneru Project", IntroLoading = "7", ConfigFolder = "myhubscript"})
+local Window = OrionLib:MakeWindow({Name = "Zaneru Project", HidePremium = false, SaveConfig = true, IntroText = "Welcome Zaneru Project", ConfigFolder = "myhubscript"})
 
 OrionLib:MakeNotification({
 	Name = "Notification",
 	Content = "Made By zaneru.id 😎",
 	Image = "rbxassetid://7733911828",
-	Time = 7
+	Time = 5
 })
 
 local Tab = Window:MakeTab({
