@@ -16,6 +16,14 @@ local Tab = Window:MakeTab({
 
 
 Tab:AddButton({
+	Name = "Auto Parry Virtualizer",
+    Icon = "rbxassetid://7733715400",
+	Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652"))()
+  	end    
+})
+
+Tab:AddButton({
 	Name = "Omg Hub",
     Icon = "rbxassetid://7733715400",
 	Callback = function()
