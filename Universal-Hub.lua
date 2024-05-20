@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Zaneru Project", HidePremium = false, SaveConfig = true, IntroText = "Welcome Zaneru Project", ConfigFolder = "myhubscript"})
+local Window = OrionLib:MakeWindow({Name = "Zaneru Project", HidePremium = false, SaveConfig = true, IntroText = "Welcome Zaneru Project", IntroTime = 5, ConfigFolder = "myhubscript"})
 
 OrionLib:MakeNotification({
 	Name = "Notification",
