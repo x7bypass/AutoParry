@@ -103,7 +103,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddButton({
 	Name = "W Azure",
-    Icon = "rbxassetid://7733715400",
+        Icon = "rbxassetid://7733715400",
 	Callback = function()
             getgenv().Team = "Marine"
 getgenv().AutoLoad = false --Will Load Script On Server Hop
@@ -117,7 +117,7 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc61
 
 Tab:AddButton({
 	Name = "Hoho Hub",
-    Icon = "rbxassetid://7733715400",
+        Icon = "rbxassetid://7733715400",
 	Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
         end
@@ -132,7 +132,9 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
         Name = "Script not added yet",
         Image = "rbxassetid://7734021118",
-        
+        Callback = function()
+
+	end		
 })
 
 
@@ -148,25 +150,26 @@ Tab:AddButton({
         
 })
 
-local Tab = Window:MakeTab({
-    Name = "Fly Universal",
-    Icon = "rbxassetid://7733799901",
-    PremiumOnly = false
-})
-
-Tab:AddButton({
-    Name = "Fly Universal (Click For Execute)",
-    Icon = "rbxassetid://7733715400",
-    Callback = function()
-          loadstring(game:HttpGet("https://raw.githubusercontent.com/zanesirusen/Flying-GUI/main/Fly-GUI-V3"))()
-    end
-})
-
-
 local MainTab = Window:MakeTab({
     Name = "Main",
     Icon = "rbxassetid://7733993211",
     PremiumOnly = false
+})
+
+MainTab:AddButton({
+    Name = "Aimbot & ESP Universal (Click For Execute)",
+    Icon = "rbxassetid://7743878496",
+    Callback = function()
+	  loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua"))()
+    end					
+})
+
+MainTab:AddButton({
+    Name = "Fly GUI (Click For Execute)",
+    Icon = "rbxassetid://7733696665",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/zanesirusen/Flying-GUI/main/zaneru.lua"))()
+    end
 })
 
 MainTab:AddToggle({
