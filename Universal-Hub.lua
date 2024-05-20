@@ -8,20 +8,13 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
+
 local Tab = Window:MakeTab({
 	Name = "Blade Ball",
 	Icon = "rbxassetid://7733964126",
 	PremiumOnly = false
 })
 
-
-Tab:AddButton({
-	Name = "Auto Parry Virtualizer",
-    Icon = "rbxassetid://7733715400",
-	Callback = function()
-      loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652"))()
-  	end    
-})
 
 Tab:AddButton({
 	Name = "Omg Hub",
@@ -104,6 +97,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
     Name = "Blox Fruit",
+    Image = "rbxassetid://7733964126",
     Icon = "rbxassetid://7733964126",
     PremiumOnly = false
 })
@@ -113,7 +107,13 @@ Tab:AddButton({
 	Name = "W Azure",
         Icon = "rbxassetid://7733715400",
 	Callback = function()
-         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+            getgenv().Team = "Marine"
+getgenv().AutoLoad = false --Will Load Script On Server Hop
+getgenv().SlowLoadUi  = false
+getgenv().ForceUseSilentAimDashModifier = false --Force turn on silent aim , if error then executor problem
+getgenv().ForceUseWalkSpeedModifier = false --Force turn on Walk Speed Modifier , if error then executor problem
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+    
   	end    
 })
 
@@ -123,7 +123,40 @@ Tab:AddButton({
 	Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
         end
-    })
+})
+
+Tab:AddButton({
+        Name = "RINX (NEW)",
+        Icon = "rbxassetid://7733715400",
+        Callback = function()
+            loadstring(game:HttpGetAsync"https://github.com/RinXHub/RinX/raw/main/output.lua")()
+        end      
+})
+
+Tab:AddButton({
+        Name = "Lunar X",
+        Icon = "rbxassetid://7733715400",
+        Callback = function()
+            _G.Team = "Pirates"--Marines
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NguyenLam2504/LunarXHubNextGeneration/main/GameShit.lua"))()
+        end   
+})
+
+Tab:AddButton({
+        Name = "VALK",
+        Icon = "rbxassetid://7733715400",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptssz/Folder_Script/main/Valk_Hub"))()
+        end   
+})
+
+Tab:AddButton({
+        Name = "RELZ",
+        Icon = "rbxassetid://7733715400",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/main/execute.hack", true))()
+        end   
+})
 
 local Tab = Window:MakeTab({
     Name = "Arsenal",
@@ -131,12 +164,33 @@ local Tab = Window:MakeTab({
     PremiumOnly = false
 })
 
-Tab:AddButton({
-        Name = "Script not added yet",
-        Image = "rbxassetid://7734021118",
-        Callback = function()
+local Section = Tab:AddSection({
+	Name = "Script not added yet",
+    Icon = "rbxassetid://7743878496"
+})
 
-	end		
+
+local Tab = Window:MakeTab({
+	Name = "Da Hood",
+	Icon = "rbxassetid://7733964126",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Script not added yet",
+    Icon = "rbxassetid://7743878496"
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "The Strongest Battleground",
+	Icon = "rbxassetid://7733964126",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Script not added yet",
+    Icon = "rbxassetid://7743878496"
 })
 
 
@@ -147,20 +201,47 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-        Name = "Script not added yet",
-        Image = "rbxassetid://7734021118",
-        
+        Name = "Free Script",
+        Icon = "rbxassetid://7733715400",
+        callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
+        end
 })
 
+
+local Tab = Window:MakeTab({
+    Name = "Pet Sim 99",
+    Icon = "rbxassetid://7733964126",
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Script not added yet",
+    Icon = "rbxassetid://7743878496"
+})
+
+
+local Tab = Window:MakeTab({
+    Name = "King Legacy",
+    Icon = "rbxassetid://7733964126",
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Script not added yet",
+    Icon = "rbxassetid://7743878496"
+})
+
+
 local MainTab = Window:MakeTab({
-    Name = "Main",
-    Icon = "rbxassetid://7733993211",
+    Name = "Tools",
+    Icon = "rbxassetid://7734053426",
     PremiumOnly = false
 })
 
 MainTab:AddButton({
     Name = "Aimbot & ESP Universal (Click For Execute)",
-    Icon = "rbxassetid://7743878496",
+    Icon = "rbxassetid://773402130",
     Callback = function()
 	  loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua"))()
     end					
@@ -168,7 +249,7 @@ MainTab:AddButton({
 
 MainTab:AddButton({
     Name = "Fly GUI (Click For Execute)",
-    Icon = "rbxassetid://7733696665",
+    Icon = "rbxassetid://773402130",
     Callback = function()
           loadstring(game:HttpGet("https://raw.githubusercontent.com/zanesirusen/Flying-GUI/main/zaneru.lua"))()
     end
@@ -176,6 +257,7 @@ MainTab:AddButton({
 
 MainTab:AddButton({
 	Name = "Infinite Yield (Click For Execute)",
+    Icon = "rbxassetid://773402130",
 	Callback = function()
          loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end
@@ -210,7 +292,7 @@ MainTab:AddSlider({
     Name = "WalkSpeed",
     Min = 0,
     Max = 1000,
-    Default = 16,
+    Default = 25,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
     ValueName = "WalkSpeed",
@@ -268,16 +350,6 @@ CreditsTab:AddButton({
       end
 })
 
-local DiscordTab = Window:MakeTab({
-     Name = "Discord Server",
-     Icon = "rbxassetid://7734053495",          
-     HidePremium = false           
-})
-
-
-DiscordTab:AddButton({
-                
-})
         
 local httpHook;
 httpHook = hookfunction(game.HttpGet, function(self,...)
