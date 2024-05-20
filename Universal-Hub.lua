@@ -172,6 +172,13 @@ MainTab:AddButton({
     end
 })
 
+MainTab:AddButton({
+	Name = "Infinite Yield (Click For Execute)",
+	Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+})          
+
 MainTab:AddToggle({
     Name = "Infinite Jump",
     Default = false,
@@ -226,26 +233,11 @@ end
 
 
 MainTab:AddButton({
-    Name = "Reset",
+    Name = "Reset Character",
     Callback = function()
         game.Players.LocalPlayer.Character.Head:Destroy()
       end
 })
-
-
-local Tab = Window:MakeTab({
-	Name = "Infinite Yield",
-	Icon = "rbxassetid://7733701625",
-	PremiumOnly = false
-})
-
-
-Tab:AddButton({
-	Name = "Infinite Yield (Click For Execute)",
-	Callback = function()
-         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end
-})           
 
 
 local Tab = Window:MakeTab({
@@ -260,8 +252,7 @@ Tab:AddButton({
             OrionLib:Destroy()
     end
 })
-
-
+            
 local CreditsTab = Window:MakeTab({
     Name = "Credits",
     Icon = "rbxassetid://7229442422",
@@ -275,6 +266,17 @@ CreditsTab:AddButton({
       end
 })
 
+local DiscordTab = Window:MakeTab({
+     Name = "Discord Server",
+     Icon = "rbxassetid://7734053495",          
+     HidePremium = false           
+})
+
+
+DiscordTab:AddButton({
+                
+})
+        
 local httpHook;
 httpHook = hookfunction(game.HttpGet, function(self,...)
    local Args = {...}
